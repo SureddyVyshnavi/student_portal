@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div style="max-width: 800px; margin: auto; padding: 20px;">
+    <h2 style="text-align: center;">Contact Us</h2>
+    
+    <p style="text-align: center;">
+        If you have any questions, feel free to reach out to us using the details below or the contact form.
+    </p>
+
+    <div style="margin-top: 30px;">
+        <h3>Contact Details</h3>
+        <p><strong>Address:</strong> ABC College, 123 Main Road, Hyderabad, India</p>
+        <p><strong>Email:</strong> support@studentportal.com</p>
+        <p><strong>Phone:</strong> +91-9876543210</p>
+        <p><strong>Working Hours:</strong> Mon–Fri, 9:00 AM to 5:00 PM</p>
+    </div>
+
+    <div style="margin-top: 40px;">
+        <h3>Send Us a Message</h3>
+        <form method="POST" action="/contact">
+            <label>Name:</label><br>
+            <input type="text" name="name" required style="width: 100%;"><br><br>
+
+            <label>Email:</label><br>
+            <input type="email" name="email" required style="width: 100%;"><br><br>
+
+            <label>Subject:</label><br>
+            <input type="text" name="subject" required style="width: 100%;"><br><br>
+
+            <label>Message:</label><br>
+            <textarea name="message" rows="5" required style="width: 100%;"></textarea><br><br>
+
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+</div>
+{% endblock %}

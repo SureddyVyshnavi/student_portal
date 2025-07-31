@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🎓 Student Portal</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        .nav-left a, .nav-right a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+        .nav-right span {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎓 Student Portal</h1>
+        <nav>
+            <div class="nav-left">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/college">College</a>
+                <a href="/library">Library</a>
+            </div>
+            <div class="nav-right">
+                {% if session.get('user_id') %}
+                    <span>Welcome, {{ session.get('username') }}</span>
+                    <a href="/logout">Logout</a>
+                {% else %}
+                    <a href="/">Login</a>
+                    <a href="/register">Sign Up</a>
+                {% endif %}
+            </div>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="flashes">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <hr>
+        <p>© 2025 Student Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>
