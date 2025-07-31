@@ -1,12 +1,12 @@
-from flask import Flask, render_template, request, redirect, session, flash
-import psycopg2
 import os
+import psycopg2
+from flask import Flask, render_template, request, redirect, session, flash
 from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
-app.secret_key = 'secret'
+app.secret_key = 'secret'  # Consider using a more secure value for production
 
-# ✅ Updated: Use environment variables for DB connection
+# ✅ Database connection using environment variables
 conn = psycopg2.connect(
     host=os.environ['DB_HOST'],
     database=os.environ['DB_NAME'],
@@ -15,6 +15,7 @@ conn = psycopg2.connect(
     port=os.environ['DB_PORT']
 )
 cursor = conn.cursor()
+
 
 @app.route('/')
 def home():
