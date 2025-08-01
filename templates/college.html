@@ -1,17 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
-
-    <h1 style="text-align:center; color:#2c3e50;">🏫 About Our College</h1>
-
-    <p style="font-size:18px; line-height:1.6; text-align:justify;">
-        <strong>ABC College of Technology</strong> is a premier institute established in 2005, offering top-notch education in engineering and sciences. We believe in nurturing innovation and empowering students with practical knowledge and leadership skills.
-    </p>
-
 <div style="max-width:900px; margin:auto; padding:40px; font-family:Segoe UI, sans-serif;">
-<img src="{{ url_for('static', filename='images/banner.jpg') }}" 
-     alt="College Image" 
-     style="width: 80%; max-height: 250px; display: block; margin: 20px auto; border-radius: 10px;">
 
+    <div style="text-align: center; margin-top: 30px;">
+        <img src="{{ url_for('static', filename='images/banner.jpg') }}" 
+             alt="College Banner" 
+             style="width: 300px; border-radius: 10px; margin-bottom: 20px;">
+
+        <p style="font-size: 18px; line-height: 1.6; max-width: 700px; margin: 0 auto; text-align: justify;">
+            <strong>ABC College of Technology</strong> is a premier institute established in 2005, offering top-notch education in engineering and sciences. We believe in nurturing innovation and empowering students with practical knowledge and leadership skills.
+        </p>
+    </div>
 
     <hr style="margin:30px 0;">
 
@@ -67,5 +66,4 @@
 
     <p style="text-align:center; margin-top:40px; color:#888;">© 2025 Student Portal</p>
 </div>
-
 {% endblock %}
