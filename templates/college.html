@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
+
 <div style="max-width:900px; margin:auto; padding:40px; font-family:Segoe UI, sans-serif;">
+
+    <!-- ✅ College Banner Image -->
+    <img src="{{ url_for('static', filename='images/banner.jpg') }}" 
+         alt="College Image" 
+         style="width:100%; border-radius:10px; margin-bottom:20px;">
 
     <h1 style="text-align:center; color:#2c3e50;">🏫 About Our College</h1>
 
@@ -62,4 +68,5 @@
 
     <p style="text-align:center; margin-top:40px; color:#888;">© 2025 Student Portal</p>
 </div>
+
 {% endblock %}
