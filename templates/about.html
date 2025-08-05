@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-<div style="max-width:900px; margin:auto; padding:40px; font-family:Segoe UI, sans-serif;">
+<div style="max-width:1000px; margin:auto; padding:40px; font-family:Segoe UI, sans-serif;">
+
+    <!-- 🔷 Banner Image -->
+    <img src="{{ url_for('static', filename='images/about-banner.jpg') }}" 
+         style="width:100%; border-radius:10px; margin-bottom:30px;" 
+         alt="Student Portal Banner">
 
     <h1 style="text-align:center; color:#2c3e50;">🎓 About Student Portal</h1>
     <p style="font-size:18px; line-height:1.6; text-align:justify;">
@@ -9,7 +14,7 @@
 
     <hr style="margin:30px 0;">
 
-    <h2 style="color:#34495e;">🚀 Key Features</h2>
+    <h2 style="background-color:#eef6fc; padding:15px; border-left:5px solid #3498db;">🚀 Key Features</h2>
     <ul style="font-size:17px; line-height:1.8;">
         <li>🔐 Secure login and user registration system</li>
         <li>📝 Register and manage student data with course, contact, and profile details</li>
@@ -20,31 +25,49 @@
 
     <hr style="margin:30px 0;">
 
-    <h2 style="color:#34495e;">👥 Who Can Use the Portal?</h2>
+    <h2 style="background-color:#eef6fc; padding:15px; border-left:5px solid #3498db;">👥 Who Can Use the Portal?</h2>
     <p style="font-size:17px; line-height:1.6; text-align:justify;">
         This platform is ideal for <strong>college students</strong>, <strong>faculty members</strong>, and <strong>administrators</strong> who wish to streamline student and academic data handling using a paperless and digital solution.
     </p>
 
     <hr style="margin:30px 0;">
 
-    <h2 style="color:#34495e;">🧰 Technologies Used</h2>
+    <h2 style="background-color:#eef6fc; padding:15px; border-left:5px solid #3498db;">🧰 Technologies Used</h2>
     <ul style="font-size:17px; line-height:1.8;">
-        <li>🐍 Python with Flask for the backend logic</li>
-        <li>🗃️ PostgreSQL as a robust relational database</li>
-        <li>🎨 HTML & CSS for frontend design and layout</li>
-        <li>🛰️ Deployed using IIS or Render for web hosting</li>
+        <li>🐍 Python with Flask for backend logic</li>
+        <li>🗃️ PostgreSQL for relational database</li>
+        <li>🎨 HTML, CSS, and Jinja2 for frontend design and templates</li>
+        <li>🚀 Deployment with Render</li>
+        <li>🔗 GitHub for version control</li>
     </ul>
 
     <hr style="margin:30px 0;">
 
-    <h2 style="color:#34495e;">🎯 Our Mission</h2>
+    <h2 style="background-color:#eef6fc; padding:15px; border-left:5px solid #3498db;">📊 Portal Stats</h2>
+    <ul style="list-style:none; padding:0; font-size:17px; line-height:1.8;">
+        <li>👥 100+ Registered Users</li>
+        <li>📘 200+ Books Available</li>
+        <li>🏫 Used by 1 Institution (and expanding!)</li>
+    </ul>
+
+    <hr style="margin:30px 0;">
+
+    <h2 style="background-color:#eef6fc; padding:15px; border-left:5px solid #3498db;">💬 What Our Users Say</h2>
+    <blockquote style="font-style:italic; color:#555; border-left:5px solid #ccc; padding-left:15px;">
+        "The Student Portal made everything from registration to book borrowing incredibly smooth!"<br>
+        <small>— A Final Year Student</small>
+    </blockquote>
+
+    <hr style="margin:30px 0;">
+
+    <h2 style="background-color:#eef6fc; padding:15px; border-left:5px solid #3498db;">🎯 Our Mission</h2>
     <p style="font-size:17px; line-height:1.6; text-align:justify;">
         We aim to simplify how educational institutions handle student data and improve the overall academic experience by providing an intuitive, secure, and efficient digital solution.
     </p>
 
     <hr style="margin:30px 0;">
 
-    <h2 style="color:#34495e;">👩‍💻 Developer Info</h2>
+    <h2 style="background-color:#eef6fc; padding:15px; border-left:5px solid #3498db;">👩‍💻 Developer Info</h2>
     <p style="font-size:17px; line-height:1.6; text-align:justify;">
         Developed by <strong>Vyshnavi</strong> as part of a full-stack development journey. This project showcases practical use of real-world tools and programming skills across frontend, backend, and database layers.
     </p>
